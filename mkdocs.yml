@@ -1,0 +1,30 @@
+site_name: "PyMsgbus" 
+  
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate 
+    - content.code.highlight
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      pygments_style: default
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+plugins:
+  - mkdocstrings:
+      handlers: 
+        python: {}
+
+nav:
+  - Home: index.md  
+  - Consumer: consumer.md
+  - Producer: producer.md
+  - Subscriber: subscriber.md
+  - Publisher: publisher.md
+  - Service: service.md
+  - Depends: depends.md

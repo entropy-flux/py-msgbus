@@ -1,6 +1,6 @@
 [project]
 name = "pymsgbus"
-version = "0.1.0"
+version = "0.4.0"
 description = "An python framework for event driven systems"
 authors = [
     {name = "Eric Cardozo",email = "eric.m.cardozo@gmail.com"}
@@ -18,4 +18,11 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.tests.dependencies]
 pytest-asyncio = "^1.0.0"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "^9.6.14"
+mkdocstrings = {extras = ["python"], version = "^0.29.1"}
+mkdocs = "^1.6.1"
+pygments = "^2.19.1"
 
