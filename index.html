@@ -1,0 +1,982 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="consumer/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>PyMsgbus</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-pymsgbus" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="PyMsgbus" class="md-header__button md-logo" aria-label="PyMsgbus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PyMsgbus
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="PyMsgbus" class="md-nav__button md-logo" aria-label="PyMsgbus" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    PyMsgbus
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickstart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quickstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-registration-with-notifications-and-persistence-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Registration with Notifications and Persistence example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Registration with Notifications and Persistence example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaring-dependencies-and-writing-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaring Dependencies and Writing Handlers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#producing-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Producing events.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-dependencies-and-running-the-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding Dependencies and Running the Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#late-binding-with-producers-and-publishers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Late Binding with Producers and Publishers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Async support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#producer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Producer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publisher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriber" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscriber
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="consumer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consumer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="producer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Producer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="subscriber/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Subscriber
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Publisher
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="depends/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Depends
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickstart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quickstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-registration-with-notifications-and-persistence-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Registration with Notifications and Persistence example
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Registration with Notifications and Persistence example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaring-dependencies-and-writing-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaring Dependencies and Writing Handlers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#producing-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Producing events.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-dependencies-and-running-the-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding Dependencies and Running the Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#late-binding-with-producers-and-publishers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Late Binding with Producers and Publishers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#async-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Async support
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#producer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Producer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consumer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publisher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publisher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscriber" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscriber
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="welcome-to-pymsgbus">Welcome to PyMsgbus</h1>
+<p><a href="https://www.apache.org/licenses/LICENSE-2.0"><img alt="License" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" /></a></p>
+<p><code>pymsgbus</code> is a lightweight, extensible Python message bus framework designed to simplify event-driven and message-driven architectures using <strong>services, producers, consumers, publishers, and subscribers</strong> with dependency injection support. It offers synchronous and asynchronous support for handling messages/events with automatic dependency resolution.</p>
+<hr />
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Event-driven communication</strong> via Producers and Consumers  </li>
+<li><strong>Topic-based messaging</strong> with Publishers and Subscribers  </li>
+<li><strong>Dependency injection</strong> via <code>Depends</code> decorator and provider overrides  </li>
+<li>Support for <strong>sync and async</strong> message handling  </li>
+<li>Flexible message routing with automatic handler registration  </li>
+<li>Uses <strong>ubiquitous language</strong> concepts for clear event modeling  </li>
+<li>Supports <strong>generic and union</strong> event types  </li>
+<li>Designed for <strong>domain-driven design (DDD)</strong> and microservices architecture  </li>
+</ul>
+<hr />
+<h2 id="installation">Installation</h2>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pymsgbus
+</code></pre></div>
+<p>If you are on poetry:</p>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>add<span class="w"> </span>pymsgbus
+</code></pre></div>
+<hr />
+<h2 id="quickstart">Quickstart</h2>
+<h3 id="user-registration-with-notifications-and-persistence-example">User Registration with Notifications and Persistence example</h3>
+<p>Let's create a simple event-driven registration system for users. First, we define a basic <code>User</code> entity and some related events.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus</span><span class="w"> </span><span class="kn">import</span> <span class="n">event</span> 
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">:</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="nd">@event</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Created</span><span class="p">[</span><span class="n">T</span><span class="p">]:</span>  <span class="c1"># Generics are supported.</span>
+    <span class="n">entity</span><span class="p">:</span> <span class="n">T</span>
+
+<span class="nd">@event</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">UpdatedUser</span><span class="p">:</span>
+    <span class="n">entity</span><span class="p">:</span> <span class="n">User</span>
+
+<span class="nd">@event</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RegistrationDone</span><span class="p">:</span>
+    <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
+</code></pre></div>
+<h4 id="declaring-dependencies-and-writing-handlers">Declaring Dependencies and Writing Handlers</h4>
+<p>Next, declare dependencies and write handlers for these events. You can implement them inline or use dependency injection to provide the actual implementations later.</p>
+<p>A <strong>Consumer</strong> handles events, while a Subscriber handles messages. Consumers are smart—they determine which events to handle based on type hints. You can group multiple event types for a single consumer using unions, allowing one handler to process several event types. Multiple consumers can handle the same event type as well.</p>
+<p>Messages passed to a <strong>Subscriber</strong> are routed via topics. Subscribers can listen to multiple topics, and multiple subscribers can subscribe to the same topic.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Depends</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Consumer</span><span class="p">,</span> <span class="n">Subscriber</span>
+
+<span class="n">consumer</span> <span class="o">=</span> <span class="n">Consumer</span><span class="p">()</span>
+<span class="n">subscriber</span> <span class="o">=</span> <span class="n">Subscriber</span><span class="p">()</span> 
+
+<span class="k">def</span><span class="w"> </span><span class="nf">getdb</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>  <span class="c1"># Database dependency, to be overridden later</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">getnfs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>  <span class="c1"># Notifications dependency, to be overridden later</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+<span class="nd">@consumer</span><span class="o">.</span><span class="n">handler</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_put</span><span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="n">Created</span><span class="p">[</span><span class="n">User</span><span class="p">]</span> <span class="o">|</span> <span class="n">UpdatedUser</span><span class="p">,</span> <span class="n">db</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">getdb</span><span class="p">)):</span>
+    <span class="n">db</span><span class="p">[</span><span class="n">event</span><span class="o">.</span><span class="n">entity</span><span class="o">.</span><span class="n">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="n">entity</span><span class="o">.</span><span class="n">name</span>
+
+<span class="nd">@consumer</span><span class="o">.</span><span class="n">handler</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_registered</span><span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="n">Created</span><span class="p">[</span><span class="n">User</span><span class="p">]):</span>
+    <span class="n">consumer</span><span class="o">.</span><span class="n">consume</span><span class="p">(</span><span class="n">RegistrationDone</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;User </span><span class="si">{</span><span class="n">event</span><span class="o">.</span><span class="n">entity</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> registered.&quot;</span><span class="p">))</span>
+
+<span class="nd">@subscriber</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s1">&#39;notifications&#39;</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">handle_notification</span><span class="p">(</span><span class="n">msg</span><span class="p">:</span> <span class="n">RegistrationDone</span><span class="p">,</span> <span class="n">nfs</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">getnfs</span><span class="p">)):</span>
+    <span class="n">nfs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="nd">@consumer</span><span class="o">.</span><span class="n">handler</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">forward_to_subscriber</span><span class="p">(</span><span class="n">event</span><span class="p">:</span> <span class="n">RegistrationDone</span><span class="p">):</span>
+    <span class="n">subscriber</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="s1">&#39;notifications&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="producing-events">Producing events.</h4>
+<p>Now, write code that produces the events you defined. These can be simple functions or part of a Service. Services also support dependency injection and can be invoked directly or by name.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Service</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Depends</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">consumer</span><span class="o">.</span><span class="n">consume</span><span class="p">(</span><span class="n">Created</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+
+<span class="n">service</span> <span class="o">=</span> <span class="n">Service</span><span class="p">()</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">somedep</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;I&#39;m a dependency&quot;</span>
+
+<span class="nd">@service</span><span class="o">.</span><span class="n">handler</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">somedep</span><span class="p">)):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">consumer</span><span class="o">.</span><span class="n">consume</span><span class="p">(</span><span class="n">UpdatedUser</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">dep</span><span class="p">)</span> <span class="c1">#&quot;I&#39;m a dependency&quot;</span>
+</code></pre></div>
+<h4 id="overriding-dependencies-and-running-the-logic">Overriding Dependencies and Running the Logic</h4>
+<p>Finally, override the dependencies with actual infrastructure—in this case, simple Python objects. Then execute your logic; all events and messages will be dispatched and handled by the registered components.</p>
+<div class="highlight"><pre><span></span><code><span class="n">db</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">nfs</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">getrealdb</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">db</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">getrealnfs</span><span class="p">():</span>
+    <span class="k">yield</span> <span class="n">nfs</span> <span class="c1">#Generators with cleanup supported. </span>
+
+<span class="n">consumer</span><span class="o">.</span><span class="n">override</span><span class="p">(</span><span class="n">getdb</span><span class="p">,</span> <span class="n">getrealdb</span><span class="p">)</span>
+<span class="n">subscriber</span><span class="o">.</span><span class="n">override</span><span class="p">(</span><span class="n">getnfs</span><span class="p">,</span> <span class="n">getrealnfs</span><span class="p">)</span>
+
+<span class="n">register</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">)</span>
+<span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Alice Updated&#39;</span><span class="p">)</span> <span class="c1">#or service.execute(&#39;update&#39;, 1, &#39;Alice Updated&#39;)</span>
+
+<span class="k">assert</span> <span class="n">db</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Alice Updated&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">nfs</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;User 1 registered.&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nfs</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="late-binding-with-producers-and-publishers">Late Binding with Producers and Publishers</h4>
+<p>Consumers and subscribers can also be late-bound using a Producer (for consumers) and a Publisher (for subscribers). Define these alongside your services.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Service</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Depends</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus</span><span class="w"> </span><span class="kn">import</span> <span class="n">Producer</span><span class="p">,</span> <span class="n">Publisher</span> 
+
+<span class="n">service</span> <span class="o">=</span> <span class="n">Service</span><span class="p">()</span>
+<span class="n">producer</span> <span class="o">=</span> <span class="n">Producer</span><span class="p">()</span>
+<span class="n">publisher</span> <span class="o">=</span> <span class="n">Publisher</span><span class="p">()</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">producer</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">Created</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">somedep</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;I&#39;m a dependency&quot;</span>
+
+<span class="nd">@service</span><span class="o">.</span><span class="n">handler</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">somedep</span><span class="p">)):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">producer</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">UpdatedUser</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+    <span class="n">publisher</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">&quot;Update performed&quot;</span><span class="p">,</span> <span class="s1">&#39;some-topic&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p>Then, bind them at runtime like this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">producer</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">consumer</span><span class="p">)</span>
+<span class="n">publisher</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">subscriber</span><span class="p">)</span>
+
+<span class="o">...</span>
+
+<span class="n">register</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">)</span>
+<span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Alice Updated&#39;</span><span class="p">)</span>  <span class="c1"># Or: service.execute(&#39;update&#39;, 1, &#39;Alice Updated&#39;)</span>
+</code></pre></div>
+<h4 id="async-support">Async support</h4>
+<p>All core components (e.g., <code>Consumer</code>, <code>Service</code>, <code>Producer</code>, etc.) have asynchronous counterparts 
+available in the <code>pymsgbus.asyncio</code> subpackage. Use <code>async</code> and <code>await</code> to integrate them into an 
+asynchronous workflow.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus.asyncio</span><span class="w"> </span><span class="kn">import</span> <span class="n">Service</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus.asyncio</span><span class="w"> </span><span class="kn">import</span> <span class="n">Depends</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pymsgbus.asyncio</span><span class="w"> </span><span class="kn">import</span> <span class="n">Producer</span><span class="p">,</span> <span class="n">Publisher</span>
+
+<span class="n">service</span> <span class="o">=</span> <span class="n">Service</span><span class="p">()</span>
+<span class="n">producer</span> <span class="o">=</span> <span class="n">Producer</span><span class="p">()</span>
+<span class="n">publisher</span> <span class="o">=</span> <span class="n">Publisher</span><span class="p">()</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">Created</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">somedep</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;I&#39;m a dependency&quot;</span> 
+
+<span class="nd">@service</span><span class="o">.</span><span class="n">handler</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="nb">id</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">dep</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Depends</span><span class="p">(</span><span class="n">somedep</span><span class="p">)):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">producer</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">UpdatedUser</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+    <span class="k">await</span> <span class="n">publisher</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">&quot;Update performed&quot;</span><span class="p">,</span> <span class="s1">&#39;some-topic&#39;</span><span class="p">)</span>
+
+<span class="o">...</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">register</span><span class="p">(</span><span class="s1">&#39;Alice&#39;</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Alice Updated&#39;</span><span class="p">)</span>  <span class="c1"># Or: await service.execute(&#39;update&#39;, 1, &#39;Alice Updated&#39;)</span>
+</code></pre></div>
+<h2 id="api-summary">API Summary</h2>
+<h3 id="producer">Producer</h3>
+<ul>
+<li><code>register(*consumers)</code>: Register consumers to send events to.</li>
+<li><code>dispatch(event)</code>: Dispatch an event to registered consumers.</li>
+</ul>
+<h3 id="consumer">Consumer</h3>
+<ul>
+<li><code>handler(func)</code>: Decorator to register an event handler.</li>
+<li><code>consume(event)</code>: Method to consume an event.</li>
+<li><code>override(dep, impl)</code>: Override a dependency.</li>
+</ul>
+<h3 id="publisher">Publisher</h3>
+<ul>
+<li><code>register(*subscribers)</code>: Register subscribers.</li>
+<li><code>publish(message, topic)</code>: Method to publish a message to subscribers.</li>
+</ul>
+<h3 id="subscriber">Subscriber</h3>
+<ul>
+<li><code>subscribe(*topics)</code>: Decorator to register handlers for topics.</li>
+<li><code>receive(message, topic)</code>: Method to receive messages for a topic.</li>
+<li><code>override(dep, impl)</code>: Override dependencies.</li>
+</ul>
+<hr />
+<h2 id="license">License</h2>
+<p>This project is licensed under the Apache License, Version 2.0 — see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<p>© 2024 Eric Cardozo. All rights reserved.</p>
+<hr />
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are welcome! Please open issues or pull requests for bugs, features, or enhancements.</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.code.highlight"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
