@@ -1,6 +1,6 @@
 [project]
 name = "pymsgbus"
-version = "0.4.0"
+version = "0.4.1"
 description = "An python framework for event driven systems"
 authors = [
     {name = "Eric Cardozo",email = "eric.m.cardozo@gmail.com"}
