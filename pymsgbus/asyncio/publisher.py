@@ -10,6 +10,7 @@
 # See the License for specific terms.  
 
 from typing import Any
+from asyncio import gather
 from pymsgbus.subscriber import Subscriber
 
 class Publisher:
@@ -31,9 +32,8 @@ class Publisher:
         Args:
             message (Any): The message to publish.
             topic (str): The topic to publish the message to.
-        """
-        for subscriber in self.subscribers:
-            await subscriber.receive(message, topic)
+        """ 
+        await gather(*(subscriber.receive(message, topic) for subscriber in self.subscribers))
 
     def register(self, *subscribers: Subscriber) -> None:
         """
