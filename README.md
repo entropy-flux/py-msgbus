@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
-`pymsgbus` is a lightweight, extensible Python message bus framework designed to simplify event-driven and message-driven architectures using **services, producers, consumers, publishers, and subscribers** with dependency injection support. It offers synchronous and asynchronous support for handling messages/events with automatic dependency resolution.
+pymsgbus is a lightweight, extensible Python message bus framework designed to simplify event-driven and message-driven architectures using **services, producers, consumers, publishers, and subscribers** with dependency injection support. It offers synchronous and asynchronous support for handling messages/events with automatic dependency resolution.
 
 ---
 
@@ -23,12 +23,6 @@
 
 ```bash
 pip install pymsgbus
-```
-
-If you are on poetry:
-
-```bash
-poetry add pymsgbus
 ```
 
 --- 
